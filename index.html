@@ -1,10 +1,9 @@
 <!DOCTYPE html> 
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carta Secreta by myeya</title>
-
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -12,7 +11,6 @@
       padding: 0;
       background-color: #fce4ec;
     }
-
     .screen {
       display: none;
       justify-content: center;
@@ -20,15 +18,12 @@
       height: 100vh;
       text-align: center;
     }
-
     .active {
       display: flex;
     }
-
     .password-screen {
       flex-direction: column;
     }
-
     .keypad {
       display: grid;
       grid-template-columns: repeat(3, 60px);
@@ -36,7 +31,6 @@
       margin-top: 20px;
       justify-content: center;
     }
-
     .key {
       background-color: #f8bbd0;
       border: none;
@@ -46,43 +40,34 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-
     .key:hover {
       background-color: #f48fb1;
     }
-
     .input-display {
       font-size: 24px;
       margin-top: 20px;
       letter-spacing: 8px;
     }
-
     .notepad {
       background-color: #fff0f6;
       border: 3px solid #f8bbd0;
-      padding: 25px;
+      padding: 20px;
       border-radius: 20px;
       width: 90%;
       max-width: 500px;
       text-align: left;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      line-height: 1.7;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      line-height: 1.6;
     }
-
     .notepad h3 {
       margin-top: 0;
     }
   </style>
 </head>
-
 <body>
-
-<!-- Pantalla contraseña -->
 <div id="passwordScreen" class="screen password-screen active">
-  <h2>🔒 Ingresa la contraseña</h2>
+  <h2>🔒 Enter password</h2>
   <div class="input-display" id="inputDisplay">••••</div>
-
   <div class="keypad">
     <button class="key" onclick="enterDigit('1')">1</button>
     <button class="key" onclick="enterDigit('2')">2</button>
@@ -91,77 +76,61 @@
     <button class="key" onclick="enterDigit('5')">5</button>
     <button class="key" onclick="enterDigit('6')">6</button>
     <button class="key" onclick="enterDigit('7')">7</button>
-    <button class="key" onclick="enterDigit('8')">8</button>
     <button class="key" onclick="enterDigit('9')">9</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
     <div></div>
     <button class="key" onclick="enterDigit('0')">0</button>
     <div></div>
   </div>
 </div>
 
-<!-- Pantalla carta -->
 <div id="notepadScreen" class="screen">
   <div class="notepad">
-
-    <h3>📅 22 septiembre 2025</h3>
-    <h4>💌 Para Jenni</h4>
+    <h3>📅 22 septiembre 2025 </h3>
+    <h4>💌 Para Jenni </h4>
 
     <p>
-      Mi niña hermosa, mi dulce Jenni, mi chulis, mi cachetona preciosa… 
-      a veces siento que las palabras se me quedan pequeñas cuando intento 
-      decirte lo orgulloso que estoy de ti. No solo por lo inteligente 
-      y maravillosa que eres, sino por la fuerza tan inmensa que llevas 
-      dentro aunque el mundo a veces te pese más de lo que debería.
+      Mi niña hermosa, mi dulce Jenni mi chulis, mi cachetona hermosa, dejame decirte que estoy muy
+      pero muy feliz por ti aveces se me acaban las palabras para decirte lo mucho que te amo
+      y lo orgulloso que estoy de ti mi bebita por lo fuerte y capaz que eres aveces siento 
+      que es mi culpa que mereces alguien mejor pero me doy cuenta de algo y es que
+      no puedo vivir sin ti. 
     </p>
 
     <p>
-      Me duele cuando dudas de ti, porque yo veo lo que tú no ves. 
-      Veo a la mujer fuerte que sigue adelante incluso cuando tiene miedo. 
-      Veo a la niña sensible que ama con todo el corazón. 
-      Y cada vez que sonríes, aunque estés cansada, me dan ganas de abrazarte 
-      y protegerte de todo lo que te haga daño.
+      Me enamore de ti sin saber que serias mi mundo entero mi razon de vivir
+      mi fuerza y mi valentia pq en ti encontre lo que nadie mas me dio, 
+      "amor", aun recuerdo la primera vez que te vi, sentir esas maripositas y esa
+      sensacion de paz ese sentimiento de conexion que nunca quiero dejar de sentir
+      pq en verdad mi corazon late mas y mas por ti y nadie ocupara ese lugar que tu 
+      ya tienes.
     </p>
 
     <p>
-      A veces me invade el miedo… miedo de no ser suficiente para ti, 
-      miedo de fallarte, miedo de no poder devolverte todo el amor 
-      tan puro que tú me das. Pero hay algo que tengo claro: 
-      no quiero una vida donde tú no estés. 
-      Porque desde que llegaste, mi mundo tiene sentido.
+      Gracias por cada día hermoso que me regalas. Gracias por estar conmigo,
+      por elegirme, por darme tu amor tan sincero y tan puro.
+      No sabes cuánto valoro cada palabra tuya, cada risa,
+      cada momento compartido.
     </p>
 
     <p>
-      Me enamoré de ti sin darme cuenta, y cuando reaccioné, 
-      ya eras mi razón de sonreír, mi pensamiento antes de dormir 
-      y mi primer deseo al despertar. 
-      Nadie ocupa el lugar que tú tienes en mi corazón, 
-      porque ese espacio fue hecho solo para ti.
+      Tambien quiero pedirte perdon por haberte lastimado por 
+      darte musho nudos, por hacerte derramar muchas lagrimas
+      por todo y por que pido perdon? por que eres el amor de mi vida
+      por que tu sonrisa y tu felicidad es lo mas imporante de mi vida
+      pq no solo me enamora esa carita esa sonrisa y esos cachetitos 
+      preciosos me enamora tu voz tu forma de ser tu risa tus 
+      ocurrencias tu manera de perdonar.
+      simplemente perdon por todo por lastimarte quiero que sepas
+      que aveces tambien me quedo sin palabra aveces 
+      siento que decir te amo es muy poco para todo lo que sento 
+      pero hoy te digo con la mano en el corazon te amo 
+      te amo mas de lo que mis palabras dicen
+      y sobre todo siempre seras el amor de mi vida
     </p>
 
     <p>
-      Perdóname por cada lágrima que te he causado, 
-      por cada nudo en tu garganta, por cada momento en el que 
-      no supe ser lo que necesitabas. 
-      Créeme que si pudiera regresar el tiempo solo para evitarte dolor, 
-      lo haría sin pensarlo.
-    </p>
-
-    <p>
-      Te amo… y siento que decir “te amo” es poco para todo lo que siento. 
-      Te amo en tus días buenos, pero más aún en tus días grises. 
-      Te amo cuando sonríes, pero también cuando lloras. 
-      Te amo cuando dudas, cuando te enojas, cuando tienes miedo. 
-      Te amo completa… sin condiciones.
-    </p>
-
-    <p>
-      Si algún día olvidas lo increíble que eres, 
-      quiero que regreses a esta carta y recuerdes que hay alguien 
-      que te ve como su presente, su futuro y su más grande bendición.
-    </p>
-
-    <p>
-      Con amor, tu novio tontito ♡
+      con amor tu novio tontito ♡
     </p>
 
   </div>
@@ -191,6 +160,5 @@
     }
   }
 </script>
-
 </body>
 </html>
