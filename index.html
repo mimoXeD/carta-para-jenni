@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta Secreta by myeya</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fce4ec;
+    }
+    .screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .active {
+      display: flex;
+    }
+    .password-screen {
+      flex-direction: column;
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .key {
+      background-color: #f8bbd0;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .key:hover {
+      background-color: #f48fb1;
+    }
+    .input-display {
+      font-size: 24px;
+      margin-top: 20px;
+      letter-spacing: 8px;
+    }
+    .notepad {
+      background-color: #fff0f6;
+      border: 3px solid #f8bbd0;
+      padding: 20px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      text-align: left;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      line-height: 1.6;
+    }
+    .notepad h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="passwordScreen" class="screen password-screen active">
+  <h2>🔒 Enter password</h2>
+  <div class="input-display" id="inputDisplay">••••</div>
+  <div class="keypad">
+    <button class="key" onclick="enterDigit('1')">1</button>
+    <button class="key" onclick="enterDigit('2')">2</button>
+    <button class="key" onclick="enterDigit('3')">3</button>
+    <button class="key" onclick="enterDigit('4')">4</button>
+    <button class="key" onclick="enterDigit('5')">5</button>
+    <button class="key" onclick="enterDigit('6')">6</button>
+    <button class="key" onclick="enterDigit('7')">7</button>
+    <button class="key" onclick="enterDigit('9')">9</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
+    <div></div>
+    <button class="key" onclick="enterDigit('0')">0</button>
+    <div></div>
+  </div>
+</div>
+
+<div id="notepadScreen" class="screen">
+  <div class="notepad">
+    <h3>📅 22 septiembre 2025 </h3>
+    <h4>💌 Mi niña linda, mi dulce amorcito </h4>
+
+    <p>
+      No tienes idea de lo orgulloso que estoy de ti. Y no solo por lo buena persona que eres,
+      ni por lo inteligente y maravillosa que siempre has sido… sino por la fuerza tan increíble
+      que llevas dentro. Por esa capacidad tan tuya de seguir adelante aun cuando las cosas se
+      ponen difíciles, aun cuando el mundo pesa un poquito más.
+    </p>
+
+    <p>
+      Me enamora tu sonrisa… esa que a veces das aunque estés cansada, esa que ilumina mis días
+      sin que tú te des cuenta. Me enamora la manera en que luchas, en que no te rindes,
+      en que sigues siendo luz incluso en medio de tus propias tormentas.
+    </p>
+
+    <p>
+      Gracias por cada día hermoso que me regalas. Gracias por estar conmigo,
+      por elegirme, por darme tu amor tan sincero y tan puro.
+      No sabes cuánto valoro cada palabra tuya, cada risa,
+      cada momento compartido.
+    </p>
+
+    <p>
+      Eres la niña de mis sueños… pero más que eso,
+      eres la realidad más bonita que me ha pasado.
+      Y si algún día dudas de ti,
+      quiero que recuerdes que hay alguien aquí
+      que ve todo lo grande que eres,
+      que cree en ti sin límites
+      y que te ama con un amor profundo, tranquilo y verdadero.
+    </p>
+
+    <p>
+      Te amo más de lo que las palabras pueden explicar. ♡
+      con amor tu novio tonto que te ama muchote
+    </p>
+
+  </div>
+</div>
+
+<script>
+  const correctPassword = '2209';
+  let input = '';
+
+  function enterDigit(digit) {
+    if (input.length < 4) {
+      input += digit;
+    }
+
+    const display = document.getElementById('inputDisplay');
+    display.textContent = input.padEnd(4, '•');
+
+    if (input.length === 4) {
+      if (input === correctPassword) {
+        document.getElementById('passwordScreen').classList.remove('active');
+        document.getElementById('notepadScreen').classList.add('active');
+      } else {
+        alert('Contraseña incorrecta, intenta de nuevo');
+        input = '';
+        display.textContent = '••••';
+      }
+    }
+  }
+</script>
+</body>
+</html>
